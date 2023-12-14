@@ -1,0 +1,128 @@
+{
+    "PYTHON": {
+      "id": 1,
+      "clue": "Bu dil, açık kaynaklı bir dil olarak popülerdir\nve\nkodlarında girinti seviyeleri önemlidir.",
+      "info": "Python;\nGuido van Rossum tarafından geliştirilmiş bir programlama dilidir.\n İlk kez 1989 yılında ortaya çıkmıştır.\n Python, web geliştirme, veri analizi ve yapay zeka gibi birçok farklı alan için kullanılan bir dildir.\n İsmi, Monty Python adlı televizyon programından gelir.\nPython yorumlanan bir dil olarak tasarlanmıştır."
+    },
+    "C": {
+      "id":2,
+      "clue":"Bu dil, düşük seviye bir programlama dilidir\nve\nişletim sistemi ve sürücü yazılımları gibi alanlarda kullanılır.",
+      "info": "C;\nDennis Ritchie tarafından geliştirilmiş\n ve \nilk kez 1972 yılında sunulmuştur.\n İşletim sistemleri, sürücüler ve gömülü sistemler gibi düşük seviyeli uygulamaların geliştirilmesi için ideal bir dildir.\nC adı, B programlama dilinin ardışığı olarak düşünülmüş\n ve \nbu yeni dilin adının B'den sonraki harf olan C olarak belirlenmiştir. \nC programlama dili, B programlama dilinin eksikliklerini\n ve \nperformans sorunlarını gidermeyi amaçlayan bir dil olarak başlamış ve büyük bir etki yaratmıştır.\n C, derlenen bir dil olarak kullanılır."
+    },
+    "C++": {
+      "id":3,
+      "clue":"Nesne yönelimli bir programlama dilidir\nve\nC diline dayalıdır.Aynı zamanda bu oyun bu dil ile geliştirilmiştir.",
+      "info": "C++;Bjarne Stroustrup tarafından C'nin üzerine inşa edilen bir dil olarak\n 1980'lerin ortalarında geliştirilmiştir.\n Bu dil, büyük projelerin geliştirilmesi\n ve \noyun geliştirme gibi alanlarda tercih edilir.\n İsmi, C'nin ardışığı ve 'artı artı' sembolünden gelir.\n C++, hem yorumlanabilen hem de derlenen bir dildir."
+    },
+    "FORTRAN": {
+      "id":4,
+      "clue":"Bilimsel ve mühendislik uygulamalarında\nyaygın olarak kullanılan eski bir dil.",
+      "info": "Fortran; John Backus ve IBM ekibi tarafından 1950'lerin başlarında geliştirilen eski\n bir programlama dilidir. Bilimsel ve mühendislik hesaplamaları için özellikle yaygındır.\n İsmi, 'Formula Translation' kelimelerinin kısaltmasıdır.\n Fortran, genellikle derlenen bir dildir."
+    },
+    "JAVASCRIPT": {
+      "id":5,
+      "clue":"Web tarayıcılarında kullanılan bir betik dilidir.",
+      "info": "JavaScript;\n Brendan Eich tarafından 1995 yılında yaratılmıştır.\n Bu dil, web tarayıcılarında çalışan bir betik dili olarak kullanılır\n ve web sayfalarını etkileşimli hale getirir.\n İsmi, Sun Microsystems ile işbirliği sonucu 'Java' kelimesinin eklenmesiyle oluşmuştur.\n JavaScript, yorumlanan bir dil olarak tasarlanmıştır."
+    },
+    "JAVA": {
+      "id":6,
+      "clue":"'Write Once, Run Anywhere' prensibi ile bilinir.",
+      "info": "Java; \nJames Gosling ve ekibi tarafından 1990 yılında sunulmuştur.\n Java, platform bağımsız ve büyük ölçekli uygulamaların geliştirilmesinde kullanılır. İsmi ilk başta 'Oak' olarak seçilmiş, daha sonra 'Java' olarak değiştirilmiştir. Java, hem yorumlanabilen hem de derlenen bir dildir."
+    },
+    "RUBY": {
+      "id":7,
+      "clue":"Sembolü bir elmas şeklindedir.",
+      "info": "Ruby, \nYukihiro 'Matz' Matsumoto tarafından 1995 yılında Japonya'da geliştirilmiştir.\n Bu dil, kolay okunabilir ve yazılabilir olup, Ruby on Rails çerçevesi ile web geliştirme için tercih edilir.\n İsmi, 'Yakut' taşı anlamına gelen 'Ruby' kelimesinden gelir.\n Ruby, yorumlanan bir dil olarak tasarlanmıştır."
+    },
+    "C#": {
+      "id":8,
+      "clue":"Java dilini öğrendikten sonra bu dili öğrenmek çok kolaydır.\nÇünkü birbirine çok benzerdir.",
+      "info": "C#, \nMicrosoft tarafından geliştirilmiş olup, baş tasarımcı Anders Hejlsberg'dir.\n İlk kez 2000'lerin başlarında piyasaya sürülmüştür.\n C#, Windows uygulamaları, oyunlar ve web hizmetleri için kullanılır.\n İsmi, 'C++' dilinin C# olarak adlandırılmasıdır.\n C#, derlenen bir dil olarak kullanılır."
+    },
+    "PHP": {
+      "id":9,
+      "clue":"Web geliştirmek için sıkça kullanılan\nbir sunucu taraflı betik dilidir.",
+      "info": "PHP, \nRasmus Lerdorf tarafından 1994 yılında oluşturulmuş bir programlama dilidir.\n Sunucu tarafı betiklerin yazılması ve dinamik web siteleri oluşturulması amacıyla kullanılır.\n İsmi, 'Kişisel Ana Sayfa' (Personal Home Page) kelimesinin kısaltmasıdır.\n PHP, yorumlanan bir dil olarak tasarlanmıştır."
+    },
+    "SWIFT": {
+      "id":10,
+      "clue":"Apple tarafından geliştirilen bir programlama dilidir\nve\nözellikle iOS uygulama geliştirmek için kullanılır.",
+      "info": "Swift, \nApple Inc. tarafından Chris Lattner liderliğinde geliştirilen bir programlama dilidir.\n İlk kez 2014 yılında piyasaya sürülmüştür.\n iOS ve macOS uygulamaları geliştirmek için kullanılır.\n İsmi, hız ve güvenlik anlamına gelir.\ Swift, derlenen bir dil olarak kullanılır."
+    },
+    "KOTLIN": {
+      "id":11,
+      "clue":"JetBrains tarafından geliştirilmiştir.",
+      "info": "Kotlin, \nJetBrains tarafından geliştirilen bir programlama dilidir\n ve \nAndrey Breslav liderliğindedir. \nİlk kez 2011 yılında tanıtılmıştır. \nAndroid uygulamaları ve genel amaçlı programlama için kullanılır. \nİsmi, Rusya'nın Kotlin adlı adasından gelir. \nKotlin, hem yorumlanabilen hem de derlenen bir dildir."
+    },
+    "RUST": {
+      "id":12,
+      "clue":"Güvenli ve hızlı sistem programlaması için tasarlanmış bir dildir.",
+      "info": "Rust, \nMozilla tarafından Graydon Hoare liderliğinde geliştirilmiştir. \nİlk kez 2010 yılında duyurulmuştur. \nSistem programlama ve güvenlik odaklı uygulamalar için ideal bir dil olarak kullanılır. \nİsmi, işçilik, hız ve güvenlik anlamına gelir. \nRust, derlenen bir dil olarak kullanılır."
+    },
+    "TYPESCRIPT": {
+      "id":13,
+      "clue":"JavaScript'e tür ekleyen bir üst küme dildir.",
+      "info": "TypeScript, \nMicrosoft tarafından geliştirilmiş bir programlama dilidir \nve Anders Hejlsberg liderliğindedir. \nİlk kez 2012 yılında piyasaya sürülmüştür. \nBüyük ölçekli uygulamaların geliştirilmesi ve web geliştirme için kullanılır. \nTypeScript, JavaScript ile uyumlu \nve \nderlenen bir dil olarak tasarlanmıştır."
+    },
+    "PERL": {
+      "id":14,
+      "clue": "Genel amaçlı bir betik dili olarak kullanılır\nve\nözellikle metin işleme için uygundur.",
+      "info": "Perl, \nLarry Wall tarafından 1987 yılında yaratılmış bir programlama dilidir. \nPerl, metin işleme, sistem yönetimi ve web geliştirmek için kullanılır. \nİsmi, 'Practical Extraction and Reporting Language' kelimelerinin kısaltmasıdır. \nPerl, yorumlanan bir dil olarak tasarlanmıştır."
+    },
+    "MATLAB": {
+      "id":15,
+      "clue":"Matris işlemleri ve grafikler oluşturmak için idealdir.",
+      "info": "Matlab, \nMathWorks tarafından geliştirilmiş bir programlama dilidir. \nİlk kez 1984 yılında sunulmuştur. \nBilimsel ve mühendislik hesaplamaları, veri analizi ve simülasyon için kullanılır. \nİsmi, 'Matrix Laboratory' kelimelerinin kısaltmasıdır. \nMatlab, yorumlanan bir dil olarak tasarlanmıştır."
+    },
+    "R": {
+      "id":16,
+      "clue":"İstatistiksel analiz ve veri madenciliği için kullanılan bir dildir.",
+      "info": "R, \nRoss Ihaka ve Robert Gentleman tarafından geliştirilen bir programlama dili\n ve \nyazılım ortamıdır. İlk kez 1993 yılında piyasaya sürülmüştür. \nİstatistiksel analiz ve veri madenciliği için kullanılır. \nİsmi, geliştiricilerin isimlerinin baş harfidir."
+    },
+    "FLUTTER": {
+      "id":17,
+      "clue":"Google tarafından geliştirilen\nçok platformlu bir mobil uygulama geliştirme çerçevesidir.",
+      "info": "Flutter,\n Google tarafından geliştirilen bir açık kaynaklı mobil uygulama geliştirme çerçevesidir. \nİlk kez 2017 yılında duyurulmuştur. \nAndroid ve iOS için kullanıcı arayüzleri oluşturmak için kullanılır. \nFlutter, derlenen bir dil olarak kullanılır."
+    },
+    "COBOL": {
+      "id":18,
+      "clue":"'Common Business-Oriented Language'ın kısaltmasıdır",
+      "info": "Cobol, \n1959 yılında CODASYL konferansında tanıtılan eski bir programlama dilidir. \nİş dünyası uygulamaları için tasarlanmıştır ve finans, \nmuhasebe gibi alanlarda yaygın olarak kullanılır. \nİsmi, 'Common Business-Oriented Language' kelimelerinin kısaltmasıdır. \nCobol, derlenen bir dil olarak kullanılır."
+    },
+    "ASSEMBLY": {
+      "id":19,
+      "clue":"Düşük seviye bir dil olan montaj dili\nbilgisayar işlemcileri için yazılır.",
+      "info": "Assembly dili, \nbilgisayarın makine diline çok yakın seviyede yazılan bir dil türüdür. \nBilgisayarın işlemci komutlarına doğrudan erişim sağlar \nve\n donanım üzerinde kontrol sağlar. \nHer bir işlemci için farklıdır ve derlenmez."
+    },
+    "ADA": {
+      "id":20,
+      "clue":"Askeri ve güvenlik uygulamaları için\nskullanılan güvenli bir dildir.",
+      "info": "Ada, \n1970'lerin sonlarında ABD Savunma Bakanlığı için geliştirilmiş bir programlama dilidir. \nYüksek güvenlik ve güvenilirlik gerektiren uygulamalar için tasarlanmıştır. \nİsmi, Ada Lovelace adlı matematikçi\n ve \nbilgisayar programcısından gelir. Ada, derlenen bir dil olarak kullanılır."
+    },
+    "HASKELL": {
+      "id":21,
+      "clue":"Temel olarak saf bir fonksiyonel programlama dili olarak bilinir",
+      "info": "Haskell, \n1987 yılında geliştirilmeye başlanmış bir tembel değerlendirme\n ve \nfonksiyonel programlama dilidir."
+    },
+    "GO": {
+      "id":22,
+      "clue":"Paralel programlama için uygundur, kolay öğrenilir.",
+      "info": "Go, \nGoogle tarafından geliştirilen açık kaynaklı bir programlama dilidir.\n İlk kez 2009 yılında tanıtılmıştır.\n Yüksek performanslı ve ölçeklenebilir sistemler için tasarlanmıştır.\n Go, derlenen bir dil olarak kullanılır."
+    },
+    "SQL": {
+      "id":23,
+      "clue":"Veritabanı yönetimi ve sorgulama için kullanılan bir dildir.",
+      "info": "SQL, \nIBM tarafından 1970'lerin başlarında geliştirilmiş bir veritabanı yönetim dili\n ve \nsorgulama dilidir"
+    },
+    "HTML": {
+      "id":24,
+      "clue":"Web sayfalarının yapısını tanımlayan işaretleme dilidir.",
+      "info": "HTML, \nTim Berners-Lee tarafından 1990 yılında oluşturulmuş bir işaretleme dilidir. \nİnternet üzerindeki belgelerin düzenlenmesi ve biçimlendirilmesi için kullanılır. \nHTML, tarayıcılar tarafından yorumlanan bir dil olarak kullanılır."
+    },
+    "CSS": {
+      "id":25,
+      "clue":"Web sayfalarının stil ve tasarımını kontrol eden bir dildir.",
+      "info": "CSS, \nW3C tarafından geliştirilmiş bir stil dilidir\n ve \nweb sayfalarının görünümünü düzenlemek için kullanılır. \nCSS, tarayıcılar tarafından yorumlanan bir dil olarak kullanılır\n ve \nHTML ile birlikte kullanılır."
+    }
+  }
+

@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/new/image">
+        <file>gameover.png</file>
+        <file>main.png</file>
+        <file>back.png</file>
+        <file>arrow.png</file>
+        <file>volume.png</file>
+        <file>volumeDisabled.png</file>
+        <file>clue.png</file>
+        <file>icon.png</file>
+        <file>line.png</file>
+        <file>line_2.png</file>
+        <file>line_3.png</file>
+        <file>circle.png</file>
+    </qresource>
+    <qresource prefix="/new/files">
+        <file>info.json</file>
+        <file>userName.txt</file>
+    </qresource>
+    <qresource prefix="/media"/>
+</RCC>

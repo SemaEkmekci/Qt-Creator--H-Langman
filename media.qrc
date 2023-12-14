@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/new/media">
+        <file>button.mp3</file>
+        <file>correct-choice.mp3</file>
+        <file>mech-keyboard.mp3</file>
+        <file>mouse-click.mp3</file>
+        <file>negative_beeps.mp3</file>
+        <file>wahwahsadtrombone.mp3</file>
+        <file>spook.mp3</file>
+        <file>success.mp3</file>
+        <file>success-trumpets.mp3</file>
+    </qresource>
+</RCC>
