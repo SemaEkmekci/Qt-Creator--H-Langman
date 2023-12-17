@@ -7,8 +7,6 @@ Langman.exe dosyasını indirin(https://drive.google.com/file/d/18QAYh0vjAGuCecf
 
 ## Ekran Görüntüleri
 
-Projenizle ilgili birkaç ekran görüntüsü ekleyebilirsiniz.
-
 [Açılış]![image](https://github.com/SemaEkmekci/Qt-Creator--H-Langman/assets/94064744/e1efeebf-6eeb-413d-9d3d-4141b17fd3c0)
 
 [Nasıl Oynanır?]![image](https://github.com/SemaEkmekci/Qt-Creator--H-Langman/assets/94064744/bfdc5257-bee8-496b-86d5-382e0603d27e)
