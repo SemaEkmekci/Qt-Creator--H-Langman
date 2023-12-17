@@ -3,7 +3,7 @@ NEU-PDK-Final-Project
 Necmettin Erbakan Üniversitesi Bilgisayar Mühendisliği 5.dönem seçmeli dersi olan "Programlama Dilleri Kavramları" dersi final projesi için geliştirilmiş bir masaüstü uygulama oyunudur. 
 
 ## Kurulum
-Langman.exe dosyasını indirin ve çalıştırın veya repoyu klonlayıp Qt Creator ile çalıştırın.
+Langman.exe dosyasını indirin(https://drive.google.com/file/d/18QAYh0vjAGuCecfYqPGsfGd_IZuWu81q/view?usp=sharing) ve çalıştırın veya repoyu klonlayıp Qt Creator ile çalıştırın.
 
 ## Ekran Görüntüleri
 
