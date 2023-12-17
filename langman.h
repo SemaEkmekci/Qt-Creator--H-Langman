@@ -27,7 +27,6 @@ private slots:
     void startGameBtn_Clicked();
     void startGameBtn_2_Clicked();
     void howToPlayBtn_Clicked();
-    void backBtn_Clicked();
     void nextLevelBtnClicked();
     void buttonHover();
     void volumeBtn();
@@ -44,12 +43,14 @@ private slots:
     void keyPressEvent(QKeyEvent *event);
     void gameScreen();
     void getLetter();
-    void toWinandtoLose();
+    void toWin();
     void showClue();
     void showClueLetter();
     void showInfo();
     void manDrawNotVisible();
     void manDraw(int count);
+    void gameReset();
+    void newGameBtn();
 
 
 private:

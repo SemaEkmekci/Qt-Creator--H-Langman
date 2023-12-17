@@ -14,8 +14,6 @@ Langman::Langman(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::Langman)
 {
-
-
     ui->setupUi(this);
     manDrawNotVisible();
     ui->stackedWidget->setCurrentIndex(0);  //Anasayfa
@@ -28,8 +26,9 @@ Langman::Langman(QWidget *parent)
 
     connect(ui->startGame, &QPushButton::clicked, this, &Langman::startGameBtn_Clicked);
     connect(ui->howToPlay, &QPushButton::clicked, this, &Langman::howToPlayBtn_Clicked);
-    connect(ui->backHowBtn, &QPushButton::clicked, this, &Langman::backBtn_Clicked);
-    connect(ui->backGameBtn, &QPushButton::clicked, this, &Langman::backBtn_Clicked);
+    connect(ui->backHowBtn, &QPushButton::clicked, this, &Langman::newGameBtn);
+    connect(ui->backGameBtn, &QPushButton::clicked, this, &Langman::newGameBtn);
+    connect(ui->startNewGame, &QPushButton::clicked, this, &Langman::newGameBtn);
     connect(ui->nextLevel, &QPushButton::clicked, this, &Langman::nextLevelBtnClicked);
 
     connect(ui->startGame_2, &QPushButton::clicked, this, &Langman::startGameBtn_2_Clicked);
@@ -76,6 +75,7 @@ void Langman::startGameBtn_Clicked()
     ui->warning->setText("");
     ui->name->setText("Adınızı Giriniz");
     ui->stackedWidget->setCurrentIndex(1); //Oyuna Giriş Ekranı
+    ui->win->setVisible(false);
 
 }
 
@@ -103,6 +103,7 @@ void Langman::startGameBtn_2_Clicked()
         else{
             ui->clue->setDisabled(true);
         }
+
         ui->stackedWidget->setCurrentIndex(2); //Oyun Ekranı
         gameScreen(); //Letter sınıfına gidip json dosyasından veri alıyorum.
         getLetter();
@@ -112,13 +113,12 @@ void Langman::startGameBtn_2_Clicked()
 
 void Langman::howToPlayBtn_Clicked()
 {
-    ui->stackedWidget->setCurrentIndex(4); //Nasıl Oynanır Ekranı
+    ui->stackedWidget->setCurrentIndex(5); //Nasıl Oynanır Ekranı
 }
 
-void Langman::backBtn_Clicked()
+void Langman::newGameBtn()
 {
     ui->stackedWidget->setCurrentIndex(0); //Anasayfa
-
 }
 
 void Langman::nextLevelBtnClicked()
@@ -185,13 +185,15 @@ void Langman::sarkiBitti()
     }
 }
 
+
+
 void Langman::backBtn()
 {
 
     if (QMessageBox::question(this, "", "Oyundan çekilmek istiyor musunuz?", QMessageBox::Yes|QMessageBox::No) == QMessageBox::Yes)
         {
         ui->stackedWidget->setCurrentIndex(0);
-        clueCount = 2;
+        /*clueCount = 2;
         for (QLabel* label : letterLabels) //Kelime ile işim bittiğinde listemi temizliyorum.
         {
             delete label;
@@ -205,10 +207,9 @@ void Langman::backBtn()
         falseLetter.clear();
         trueLets=""; //Oyunda kullanılan harfleri sıfırlıyorum. Çünkü oyun yeniden açılmış gibi oluyor.
         ui->word->setText("");
-        manDrawNotVisible(); // Adamı ekranda görünmez hale getiriyorum.
+        manDrawNotVisible(); // Adamı ekranda görünmez hale getiriyorum.*/
+        gameReset();
     }
-
-
 }
 
 void Langman::randomUserName()
@@ -374,6 +375,17 @@ void Langman::keyPressEvent(QKeyEvent *event)
                 }}
             }else if(!(falseLetter.contains(event->text().toUpper()))) //Kullanılan harf tekrar kullanılmaması için
             {
+                falseCount++;
+                qDebug() << "falseCount: " << falseCount;
+                if(falseCount == 12) //Oyun bitti KAYBEDİLDİ.
+                {
+                    toLoseVoice(); //Kaybedilirse bu ses çalcak
+                    ui->info_2->setText(questionInfo[2]); //Son kelimenin bilgisi ekranda belirecek.
+                    ui->score_2->setText("Skor: " + QString::number(score)); // Skor bilgisi ekranda belirecek.
+                    ui->stackedWidget->setCurrentIndex(4);
+                    gameReset();
+                    return;
+                }
 
                 wrongGuessVoice();
                 score-=2;
@@ -382,11 +394,11 @@ void Langman::keyPressEvent(QKeyEvent *event)
                 for (QString falseLet : falseLetter)
                 {
                     falseLets += " " + falseLet;
-
                 }
-                falseCount++;
                 ui->word->setText(falseLets);
+                if(falseCount <= 12){ //Kullanıcının 12 defa hata yapma hakkı var.
                 manDraw(falseCount);
+                }
             }
             }
             }
@@ -409,8 +421,8 @@ void Langman::getLetter()
         delete label;
     }
     letterLabels.clear();
-    if(questionInfo.size() == 1){ //Eğer questionInfo boyutu 1 ' e eşitse yarışma kazanılmış veya kaybedilmiştir.
-            toWinandtoLose();
+    if(questionInfo.size() == 1){ //Eğer questionInfo boyutu 1 ' e eşitse yarışma kazanılmıştır.
+            toWin();
         return;
     }
     trueCount = 0;
@@ -442,7 +454,7 @@ void Langman::getLetter()
     showClue();
 }
 
-void Langman::toWinandtoLose()
+void Langman::toWin()
 {
      qDebug() << "Çalıştı";
      questionInfo = let->randomLang();
@@ -478,10 +490,13 @@ void Langman::toWinandtoLose()
         layout()->addWidget(line);
      }
      if(questionInfo[0] == "KAZANDINIIZ!!!"){
+        ui->win->setVisible(false);
         toWinVoice();
-     }else{
-        toLoseVoice(); //Kaybedilirse bu ses çalcak
+
      }
+     /*else{
+        toLoseVoice(); //Kaybedilirse bu ses çalcak
+     }*/
 }
 
 void Langman::showClue()
@@ -511,10 +526,18 @@ void Langman::manDrawNotVisible()
     ui->man_5->setVisible(false);
     ui->man_6->setVisible(false);
     ui->man_7->setVisible(false);
+    ui->man_8->setVisible(false);
+    ui->man_9->setVisible(false);
+    ui->man_10->setVisible(false);
+    ui->man_11->setVisible(false);
+    ui->man_12->setVisible(false);
+    ui->eyes->setVisible(false);
+    ui->mouth->setVisible(false);
 }
 
 void Langman::manDraw(int count)
 {
+
     if(count == 1)
     {
         ui->man_1->setVisible(true);
@@ -542,9 +565,58 @@ void Langman::manDraw(int count)
     else if(count == 7)
     {
         ui->man_7->setVisible(true);
+        ui->eyes->setVisible(true);
+        ui->mouth->setVisible(true);
     }
+    else if(count == 8)
+    {
+        ui->man_8->setVisible(true);
+    }
+    else if(count == 9)
+    {
+        ui->man_9->setVisible(true);
+    }
+    else if(count == 10)
+    {
+        ui->man_10->setVisible(true);
+    }
+    else if(count == 11)
+    {
+        ui->man_11->setVisible(true);
+    }
+    else if(count == 12)
+    {
+        ui->man_12->setVisible(true);
+    }
+
 }
 
+void Langman::gameReset()
+{
+    clueCount = 2;
+    for (QLabel* label : letterLabels) //Kelime ile işim bittiğinde listemi temizliyorum.
+    {
+        delete label;
+    }
+    letterLabels.clear();
+    for (QLabel* label : lineLabels) //Kelime ile işim bittiğinde listemi temizliyorum.
+    {
+        delete label;
+    }
+    lineLabels.clear();
+    falseLetter.clear();
+    trueLets=""; //Oyunda kullanılan harfleri sıfırlıyorum. Çünkü oyun yeniden açılmış gibi oluyor.
+    ui->word->setText("");
+    falseCount = 0;
+    manDrawNotVisible(); // Adamı ekranda görünmez hale getiriyorum.
+
+}
+/*
+void Langman::newGameBtn()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+*/
 
 
 
